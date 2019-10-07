@@ -1,0 +1,60 @@
+.side-product{
+    background-color: #fff;
+}
+.head{
+    color: #a8a9d4;
+    padding-top: 10px;
+    padding-left: 13px;
+}
+.side-product h2{
+    display: inline;
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.side-product i{
+    font-size: 20px;
+    padding-right: 9px;
+}
+.Category{
+    margin-top: 15px;
+}
+.Category ul{
+    margin-bottom: 0;
+    color: #636262
+}
+.Category ul li{
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .5s ease-in-out
+}
+.Category ul li:hover{
+    background-color: #e6e6e6;
+    padding-left: 30px;
+    transition: all .5s ease-in-out
+}
+
+
+
+
+
+/* Sub menue */
+/* 
+.navbar-nav li:hover > ul.dropdown-menu {
+    display: block;
+}
+.dropdown-submenu {
+    position:relative;
+}
+.dropdown-submenu>.dropdown-menu {
+    top:0;
+    left:100%;
+    margin-top:-6px;
+}
+
+.dropdown-menu > li > a:hover:after {
+    text-decoration: underline;
+    transform: rotate(-90deg);
+}  */

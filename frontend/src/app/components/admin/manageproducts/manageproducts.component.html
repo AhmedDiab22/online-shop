@@ -1,0 +1,64 @@
+<div class="manage-product">
+  <div class="container">
+      <div class="search">
+
+          <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All Products</button>
+                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1" *ngFor="let product of products">
+                    <ul *ngFor="let product of products" class="list-unstyled list-group">
+                        <li class="list-group-item" routerLinkActive="active"><a routerLink='/admin/manage/products' [queryParams]="{category : product.category}">
+                          {{product.category}}
+                        </a>
+                        </li>
+                      </ul>
+                </div>
+              </div>
+              <input type="text" class="form-control" #query (keyup)="filter(query.value)" placeholder="Search Product...">
+            </div>
+      </div>
+    <div class="row">
+      <div class="col">
+        <h2>Manage Products</h2>
+      </div>
+      <div class="col">
+      <button class="btn btn-primary btn1" routerLink='/admin/add/product'>Add New Product</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <table class="table table-hover">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">price</th>
+              <th scope="col">category</th>
+              <th scope="col">description</th>
+              <th scope="col">imgUrl</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let product of filteredProducts; let i=index">
+              <th scope="row">{{i+1}}</th>
+              <td>{{product.name}}</td>
+              <td>{{product.price}}</td>
+              <td>{{product.category}}</td>
+              <td>{{product.description | summarypipe : 25}}</td>
+              <td>{{product.imgUrl | summarypipe : 25}}</td>
+              <td class="text-center edit-block">
+                  <span class="edit" [routerLink]="['/admin/edit/product/', product._id]">
+                    <button type="button" class="btn btn-success btn-sm">Edit</button>
+                  </span> &nbsp;
+                  <span class="delete" (click)="removeEmployee(product, i)">
+                    <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                  </span>
+                </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

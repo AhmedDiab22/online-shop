@@ -1,0 +1,51 @@
+*{
+    box-sizing: border-box
+}
+body{
+    font-family: 'Overpass',sans-serif;
+}
+html, body { height: 100%; }
+body {
+    margin: 0;
+    color: #a7a8a8;
+    background-color: #f8f8f8;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.from-group>input{
+    font-weight: bolder;
+}
+.from-group>label{
+    font-weight: lighter;
+}
+button[type="submit"]{
+    background-color: #67dfd4;
+    color: #fff;
+}
+
+.jumbotron{
+    background-color: #fff;
+    padding-top: 32px;
+}
+table tr:hover{
+    cursor: pointer;
+}
+div.validation-error{
+    width: 100%;
+    margin-top : .25rem;
+    font-size: 80%;
+    color: #dc3545
+}
+
+.container{
+    max-width: 1270px !important;
+}
+
+.card {
+    cursor: pointer;
+}
+.card:hover{
+    border-color: #a7a8a8;
+    opacity: .8;
+}

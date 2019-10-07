@@ -1,0 +1,144 @@
+<div class="blog">
+  <div class="container">
+      <div class="row">
+          <div class="col-4">
+            <app-advancesearch></app-advancesearch>
+          </div>
+          <div class="col-8">
+            <div class="bread">
+                <nav aria-label="breadcrumb mt-3">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Blog</li>
+                    </ol>
+                  </nav>
+
+                  
+    <button type="button" name="buttom" class="btn btn-warning two" *ngIf="!newPost" (click)="newBlogForm()">New Post </button> &nbsp;
+    <button [disabled]="loadingBlogs" type="button" name="buttom" class="btn btn-primary two" *ngIf="!newPost" (click)="reloadBlogs()"><i class="fa fa-repeat" aria-hidden="true"></i>&nbsp; Reload</button>
+  
+    <br>
+    <br>
+  
+    <!-- New Blog Form -->
+    <form #form="ngForm"  *ngIf="newPost" class="mb-5">
+          <h3 class="f2-light mb-4">
+              Create New Blog From *
+          </h3>
+          <div class="form-group">
+              <label for="">Title</label>
+              <input type="trxt" class="form-control" placeholder="Blog Tilte" 
+              autocomplete="off" name="title" [pattern]="namePattern" #name="ngModel" [(ngModel)]="titlee"  required minlength="5" maxlength="50">
+              <ul class="help-block text-danger" *ngIf="name.invalid && name.touched "> 
+                  <li *ngIf="name.errors?.required" >
+                      This field is required*
+                  </li>
+                  <li *ngIf="name.errors?.minlength || name.errors?.maxlength "> 
+                    Tilte must be contain chars at least 5 chars and max chars 50 chars*
+                </li> 
+                  <li *ngIf="name.errors?.pattern"> 
+                      Must be a letter or number*
+                  </li> 
+              </ul>
+          </div>
+          <div class="form-group">
+            <label for="">Body</label>
+            <textarea name="body" #bady="ngModel" class="form-control" placeholder="Body" [(ngModel)]="bodyy" required minlength="5" maxlength="500" cols="30" rows="10"></textarea>
+            <ul class="help-block text-danger" *ngIf="bady.invalid && bady.touched "> 
+                <li *ngIf="bady.errors?.required" >
+                    Body is required*
+                </li>
+                <li *ngIf="bady.errors?.minlength || bady.errors?.maxlength"> 
+                    User must be contain min chars at least 5 chars and max chars 500 chars*
+                </li> 
+            </ul>
+        </div>
+        <button class="btn btn-warning text-white" (click)="goBack()">Go Back <i class="fa fa-arrow-left" aria-hidden="true"></i>  </button> &nbsp; 
+        <button class="btn btn-primary">Save Blog </button>
+    </form>
+  
+  
+    <!-- End Blog Form -->
+  
+    <div *ngIf="!newPost">
+      <div class="panel panel-primary mt-3">
+        <div class="panel-heading">
+          <h3 class="panel-title">Title</h3>
+        </div>
+        <div class="panel-body">
+         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi tempora facere expedita voluptas, odio vel deserunt. Hic distinctio placeat mollitia dolor corporis sint quos possimus incidunt eligendi labore. Tempore, explicabo!
+        </div>
+        <div class="panel-footer">
+          <strong>Posted by:</strong>Name Created
+          <br>
+          <strong>Date:</strong> createAt : 'MMM dd, yyyy'
+          <br>
+          <div>
+            <strong>Likes : </strong>20
+            <br>
+            <strong>Dislikes : </strong>19
+            <br>
+          </div>
+          <br>
+          <a href="#"><button type="button" name="button" class="btn btn-sm btn-info">Edit</button></a>&nbsp;
+          <a href="#"><button type="button" name="button" class="btn btn-sm btn-danger">Delete</button></a> &nbsp;
+          <div class="dropdown">
+            <button type="button" name="button" class="btn btn-sm btn-success">
+              <span><i class="fa fa-thumbs-up" aria-hidden="true">&nbsp;</i>Likes : 25</span>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">Ahmed Diab</a>
+              <a href="#">jinder</a>
+              <a href="#">Patel</a>
+            </div>
+          </div> &nbsp;
+          <div class="dropdown">
+            <button type="button" name="button" class="btn btn-sm btn-warning text-light" >
+              <span><i class="fa fa-thumbs-down" aria-hidden="true">&nbsp;</i>Dislikes : 63</span>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">mohamed Diab</a>
+              <a href="#">salah</a>
+              <a href="#">Mo saed</a>
+            </div>
+          </div><br>
+          <ul class="list-group mt-2">
+            <li class="list-group-item">
+              <button type="button" name="buttom" class="btn btn-sm btn-danger my-2" *ngIf="!newPost">Post Comments</button>
+              <br>
+              <div>
+                  <form *ngIf="newPost">
+                      <textarea name="comment" #text class="form-control mb-2" minlength="1" maxlength="200" cols="30" rows="10" required></textarea>
+                      <ul class="help-block text-danger" *ngIf="text.invalid && text.touched">
+                          <li *ngIf="text.errors?.required" >
+                              This field is required*
+                          </li> 
+                          <li *ngIf="text.errors?.minlength || text.errors?.maxlength"> 
+                              User must be contain min chars at least 1 chars and max chars 500 chars*
+                          </li> 
+                      </ul>
+                      <button type="submit" name="buttom" [disabled]="text.invalid || proccessing" class="btn btn-sm btn-info" >Submit Post</button>
+                      <button type="button" [disabled]="!proccessing" name="buttom" class="btn btn-sm btn-danger ml-2">Cancel</button>
+                    </form>
+              </div>
+              <li class="list-group-item">
+                <span (click)="expand(blog._id)">Show Comments <i class="fa fa-comment" aria-hidden="true"></i>&nbsp; &nbsp;</span>
+              </li>
+              <li class="list-group-item">
+                <span>Hide Comments &nbsp;&nbsp; <i class="fa fa-comment" aria-hidden="true"></i></span>
+              </li>
+              <div>
+                <li class="list-group-item">
+                  <strong>Ahmed Diab</strong>
+                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, aut!
+                </li>
+              </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+            </div>
+          </div>
+        </div>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+.searchProduct{
+    padding: 130px 0;
+    background: url(../../../../assets/imgs/domain_search_bg-95bae51483.svg)
+}
+button{
+    padding: 15px;
+}
+.form-control{
+    padding: 27px
+}

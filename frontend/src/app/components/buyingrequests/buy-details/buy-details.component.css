@@ -1,0 +1,81 @@
+.buying-details{
+    margin-top: 10px;
+}
+.breadcrumb{
+    background-color: #f8f8f8;
+}
+.requests{
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+
+.buyingg .aa{
+    font-size: 40px;
+    color: #a8a9d4;
+    margin-top: 2px;
+}
+.buyingg .h2{
+    position: relative;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 25px;
+    margin-left: 20px;
+    color: #a8a9d4;
+}
+.buyingg .h2:after{
+    position: absolute;
+    content: '';
+    width: 70%;
+    height: 2px;
+    background-color: #ccc;
+    top: 36px;
+    left: 0;
+}
+.addingRequest a{
+    text-decoration: none;
+    color: #000;
+}
+.addingRequest a:hover{
+    color: #a8a9d4;
+}
+.card-title{
+    color: #a8a9d4;
+}
+.bodyy p{
+    padding-left: 15px;
+    margin-top: 0;
+    color: #666;
+    margin-bottom: 0;
+    border-left: 1px solid #a8a9d4
+}
+.bodyy span{
+    color: #a8a9d4;
+    font-weight: 700;
+}
+.pOnther{
+    font-size: 14px;
+    color: #666
+}
+.card-footer span{
+    color: #666;
+    font-size: 15px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+}
+.btn-primary{
+    float: right;
+    width: 125px;
+    font-size: 13px;
+}
+.advance{
+    margin-top: 20px;
+    width: 320px;
+    background-color: #a8a9d4;
+    color: #fff !important;
+}
+.page-item.active .page-link{
+    background-color: #a8a9d4;
+    border-color: #a8a9d4;
+}

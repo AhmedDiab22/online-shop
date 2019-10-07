@@ -1,0 +1,81 @@
+.footer{
+    padding: 30px 0;
+    background-color: #333333;
+    color: #cdcdcd
+}
+.footer h2{
+    font-family: monospace;
+    font-style: italic;
+    letter-spacing: 1.5px;
+    color: #fff;
+}
+p{
+    margin-top: 30px;
+}
+.row{
+    margin-top: 30px;
+    position: relative;
+}
+.footer a{
+    color: #cdcdcd
+}
+.border-right {
+    border-right: 1px solid #cccccc!important;
+}
+.col:not(:last-of-type):after{
+    content: '';
+    position: absolute;
+    top: 70px;
+    right: 0;
+    height: 100px;
+    width: 1px;
+    background-color: #cccc;
+}
+h5{
+    font-size: 20px;
+    color: #fff;
+}
+li{
+    margin-bottom: 5px;
+    transition: all .5s ease-in-out
+}
+li a{
+    transition: all .5s ease-in-out;
+    text-decoration: none
+}
+li i{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+li  a:hover{
+    color: #fff;
+    padding-left: 10px;
+    transition: all .5s ease-in-out
+}
+li:hover i{
+    color: #a8a0a0;
+    opacity: 0;
+    transition: all .5s ease-in-out
+}
+.contact li{
+    margin-top: 25px;
+}
+.social ul{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+.social li{
+    padding: 0 8px;
+    cursor: pointer;
+    transition: all .5s ease-in-out
+}
+.social li:hover{
+    opacity: .5;
+    transition: all .5s ease-in-out
+}
+
+hr{
+    background-color: rgb(131, 128, 128);
+}

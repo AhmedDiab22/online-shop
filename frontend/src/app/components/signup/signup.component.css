@@ -1,0 +1,371 @@
+input.ng-invalid.ng-touched{
+    border-left : 3px solid #f00;
+}
+/* input.ng-valid{
+    border-left : 2px solid #080;
+} */
+.bg-shade-gradient {
+    background-image: linear-gradient(180deg,rgba(27,31,35,.065),rgba(27,31,35,0))!important;
+    background-repeat: no-repeat!important;
+    background-size: 100% 200px!important;
+}
+.container{
+    padding-top: 30px;
+}
+.head{
+    text-align: center;
+    font-size: 45px;
+    font-weight: 400;
+    letter-spacing: -1px;
+    line-height: 1.1;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.head span{
+    color: #a8a9d4;
+}
+.f2-light , .about {
+    font-size: 17px!important;
+    font-weight: 200
+}
+.heading{
+    font-size: 18px !important
+}
+label{
+    font-weight: 600;
+    font-size: 15px
+}
+
+form{
+    border: 1px solid rgb(236, 235, 235);
+    padding: 15px;
+    border-radius: 10px
+}
+
+.form-control {
+    width: 100%;
+}
+.form-group .form-control {
+    background-color: #fafbfc;
+    margin-right: 5px;
+    max-width: 100%;
+}
+@media (min-width: 768px){
+.form-control, .form-select {
+    font-size: 14px;
+}
+}
+.form-control, .form-select {
+    background-color: #fff;
+    background-position: right 8px center;
+    background-repeat: no-repeat;
+    border: 1px solid #d1d5da;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 2px rgba(27,31,35,.075);
+    color: #24292e;
+    font-size: 16px;
+    line-height: 20px;
+    min-height: 34px;
+    outline: 0;
+    padding: 6px 8px;
+    vertical-align: middle;
+}
+.form-control:focus, .form-select.focus, .form-select:focus {
+    border-color: #a8a9d4;
+    box-shadow: inset 0 1px 2px rgba(27,31,35,.075), 0 0 0 1px #a8a9d4;
+    outline: none;
+}
+.note {
+    color: #586069;
+    font-size: 12px;
+    margin: 4px 0 2px;
+    min-height: 17px;
+}
+
+.tos-info {
+    border-bottom: 1px solid #eee;
+    border-top: 1px solid #eee;
+    margin: 15px 0;
+    padding: 15px 0;
+}
+.about{
+    margin-top: 45px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;   
+}
+
+.about span{
+    color: #a8a9d4
+}
+.form-group{
+    margin-bottom: 10px !important
+}
+
+.card{
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+}
+/* .card h3{
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    padding: 15px;
+}
+.card-body{
+    padding: 0;
+}
+.card-body li{
+    margin-top: 6px;
+}  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* form{
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+input.ng-invalid.ng-touched{
+    border-left : 3px solid #f00;
+}
+input.ng-valid.ng-untouched{
+    border : 2px solid #080;
+}
+.bg-shade-gradient {
+    background-image: linear-gradient(180deg,rgba(27,31,35,.065),rgba(27,31,35,0))!important;
+    background-repeat: no-repeat!important;
+    background-size: 100% 200px!important;
+}
+.f2-light , .about {
+    font-size: 22px!important;
+    font-weight: 200;
+    position: relative;
+}
+.f2-light:after{
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 35px;
+    right: 0;
+    width: 250px;
+    height: 1px;
+    background-color: #ccc;
+}
+
+
+label{
+    font-weight: 600;
+    font-size: 15px
+}
+
+.form-control {
+    width: 100%;
+}
+.form-group .form-control {
+    background-color: #fafbfc;
+    margin-right: 5px;
+    max-width: 100%;
+}
+@media (min-width: 768px){
+.form-control, .form-select {
+    font-size: 14px;
+}
+}
+.form-control, .form-select {
+    background-color: #fff;
+    background-position: right 8px center;
+    background-repeat: no-repeat;
+    border: 1px solid #d1d5da;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 2px rgba(27,31,35,.075);
+    color: #24292e;
+    font-size: 16px;
+    line-height: 20px;
+    min-height: 34px;
+    outline: 0;
+    padding: 6px 8px;
+    vertical-align: middle;
+}
+.form-control:focus, .form-select.focus, .form-select:focus {
+    border-color: #343a40;
+    box-shadow: inset 0 1px 2px rgba(27,31,35,.075), 0 0 0 0.1em #343a40;
+    outline: none;
+}
+.note {
+    color: #586069;
+    font-size: 12px;
+    margin: 4px 0 2px;
+    min-height: 17px;
+}
+
+.tos-info {
+    border-bottom: 1px solid #eee;
+    border-top: 1px solid #eee;
+    margin: 15px 0;
+    padding: 15px 0;
+}
+.about{
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-align: center;
+    float: right;
+}
+.about span{
+    color: #2188ff
+}
+h1{
+    font-size: 20px;
+    margin-top: 20px;
+    color: #a8a9d4;
+    position: relative;
+}
+h1:after{
+    position: absolute;
+    content: '';
+    top: 33px;
+    left: 0;
+    width: 73px;
+    height: 1px;
+    background-color: #ccc;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #343a40;
+    border-color: #343a40;
+}
+.btn-primary:not(:disabled):not(.disabled):active{
+    color: #fff;
+    background-color: #343a40; 
+    border-color: #343a40;
+}  
+.btn-primary:not(:disabled):not(.disabled):active:focus {
+    box-shadow: 0 0 0 0.2rem #343a40;
+}
+.btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem #343a40;
+}
+/* .card{
+    margin-top: 120px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    float: right;
+}
+.card h3{
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    padding: 15px;
+}
+.card-body{
+    padding: 0;
+}
+.card-body li{
+    margin-top: 6px;
+} */ 

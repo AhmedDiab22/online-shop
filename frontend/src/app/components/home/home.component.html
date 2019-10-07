@@ -1,0 +1,174 @@
+<div class="container">
+    <app-sidebar-slider></app-sidebar-slider>
+      <app-top-product></app-top-product>
+      <app-relateed></app-relateed>
+      <app-feature-product></app-feature-product>
+      <app-advertise></app-advertise>
+      <app-new-arreival></app-new-arreival>
+      <app-problem></app-problem>
+      <!-- <app-about-us></app-about-us> -->
+      <app-country></app-country>
+      <app-last-view-product></app-last-view-product>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<app-relateed ></app-relateed>
+<app-top-product></app-top-product>
+<app-searchproduct></app-searchproduct>
+<app-about-us></app-about-us>
+<app-advantage></app-advantage>
+<app-problem></app-problem>
+<app-country></app-country>
+
+
+ -->
+
+
+<!-- 
+
+
+
+
+
+
+
+
+
+
+
+<ng-container *ngIf="filteredProducts.length > 0; else noProduct">
+  <div class="product">
+    <div class="container">
+     <div class="row">
+        <div class="col mb-3">
+            <div *ngFor="let product of products" class="list-group">
+              <a routerLink="/home"
+                [queryParams]="{category : product.category}">
+                {{product.category}}
+              </a>
+            </div>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-lg-3" *ngFor="let product of filteredProducts">
+          <div class="card" routerLink="/product-details/{{product._id}}">
+            <img class="card-img-top" [src]="product.imgUrl" alt="">
+            <div class="card-body">
+              <h4 class="card-title">Tilte : {{product.name}}</h4>
+              <p class="card-text">Price : {{ product.price | currency:'USD':code }}</p>
+              <hr>
+              <form>
+                <button class="btn btn-primary btn-block mt-2">About Product</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+</ng-container>
+<ng-template #noProduct>
+  <div class="card-empty">
+    <div class="container">
+        <div class="card text-white bg-dark mb-3">
+            <div class="card-header">Products</div>
+            <div class="card-body">
+              <h5 class="card-title">Sorry ... :/</h5>
+              <p class="card-text">No Products Founded.</p>
+            </div>
+          </div>
+    </div>
+  </div>
+</ng-template> -->

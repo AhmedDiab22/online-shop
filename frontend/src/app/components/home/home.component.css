@@ -1,0 +1,29 @@
+.product{
+    margin-top: 20px;
+}
+.row{
+    overflow: hidden;
+}
+.card{
+    margin-bottom: 25px;
+    transition: all .5s ease-in-out;
+}
+.card img{
+    height: 270px;
+}
+.card:hover{
+    transition: all .5s ease-in-out;
+    outline: thin dotted;
+    outline: 5px auto #ababab;
+    outline-offset: -2px;
+}
+.card-empty{
+    margin-top: 30px;
+    margin: 117px auto;
+}
+.card-empty .card-header:first-child {
+    font-size: 22px;
+}
+.card-empty .card-text:last-child {
+    font-size: 30px;
+}

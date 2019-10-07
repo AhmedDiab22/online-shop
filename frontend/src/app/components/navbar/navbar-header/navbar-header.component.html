@@ -1,0 +1,146 @@
+<div class="rownav">
+  <div class="row">
+    <div class="col-lg-3 col-md-12">
+      <div class="logo" routerLink="/home">
+        <h2> Ours</h2>
+        <i class="fa fa-hand-rock-o" aria-hidden="true"></i>
+      </div>
+    </div>
+    <div class="col-lg-5  col-md-12">
+      <div class="searchProduct">
+        <input type="search" class="form-control" placeholder="Serch for product...">
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-12">
+      <div class="row">
+        <div class="col">
+          <div class="userinfo">
+            <div class="user" *ngIf="isUser">
+              <i class="fa fa-user" aria-hidden="true"></i>
+            </div>
+            <div class="login">
+              <div class="notuser">
+                <ul class="list-unstyled list-group-horizontal">
+                  <div class="row">
+                    <div class="col">
+                      <li routerLink="/login" *ngIf="!isUser && !isAdmin">Login</li>
+                    </div>
+                    <div class="col">
+                      <li routerLink="/register" *ngIf="!isUser && !isAdmin">Sign</li>
+                    </div>
+                  </div>
+                </ul>
+              </div>
+
+
+              <nav class="navbar validUser navbar-expand-md navbar-light" *ngIf="isUser">
+                <div class="" id="navbarNavDropdown">
+                  <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        {{nikeName}}
+                      </a>
+                      <ul class="dropdown-menu item-dropdown listUser" aria-labelledby="navbarDropdownMenuLink">
+                        <li>
+                          <a class="dropdown-item" href="#" routerLink="/profile">
+                            <i class="fa fa-user" aria-hidden="true"></i> <span>Profile</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#" routerLink="/user/carts"> <i class="fa fa-shopping-basket" aria-hidden="true"></i><span>Carts</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#" routerLink='/orders'> <i class="fa fa-first-order" aria-hidden="true"></i><span>Orders</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" style="cursor: pointer" (click)="singout()" > <i class="fa fa-sign-out" aria-hidden="true"></i> <span>LogOut</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+
+
+              <nav class="navbar validUser navbar-expand-md navbar-light" *ngIf="isAdmin">
+                  <div class="" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"  id="navbarDropdownMenuLink" data-toggle="dropdown"
+                          aria-haspopup="true" aria-expanded="false">
+                          {{nikeName}}
+                        </a>
+                        <ul class="dropdown-menu item-dropdown listUser" aria-labelledby="navbarDropdownMenuLink">
+                          <li>
+                            <a class="dropdown-item"  routerLink="/admin/add/product">
+                              <i class="fa fa-user" aria-hidden="true"></i> <span>Add Product</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item"  routerLink="/admin/manage/products"> <i class="fa fa-shopping-basket" aria-hidden="true"></i><span>Manage Products</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item"  routerLink='/admin/manage/orders'> <i class="fa fa-first-order" aria-hidden="true"></i><span>Manage Orders</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" style="cursor: pointer" (click)="singout()" > <i class="fa fa-sign-out" aria-hidden="true"></i> <span>LogOut</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </nav>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="membaership" *ngIf="!isUser">
+            <span>MemberShips</span>
+          </div>
+
+          <div class="iconShop" *ngIf="isUser" routerLink="/user/carts">
+            <i class="fa fa-cart-plus" aria-hidden="true"><span>{{Carts.length}}</span></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!--  
+            <li class="nav-item" *ngIf="admin">
+              <a routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}" class="nav-link"
+                routerLink="/admin/add/product">Add Product</a>
+            </li>
+            <li class="nav-item" *ngIf="admin">
+              <a routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}" class="nav-link"
+                routerLink="/admin/manage/products">Manage Products</a>
+            </li>
+            <li class="nav-item" *ngIf="admin">
+              <a routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}" class="nav-link"
+                routerLink='/admin/manage/orders'>Manage Orders</a>
+            </li> -->
+<!-- <li  class="nav-item" *ngIf="!user && !admin">
+              <a routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}" class="nav-link" routerLink="/login">Login</a>
+            </li> -->
+<!-- <li class="nav-item" *ngIf="!user && !admin">
+              <button class="btn btn-default" routerLink="/login">
+                Login <i class="fa fa-lock" aria-hidden="true"></i>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+</div> -->

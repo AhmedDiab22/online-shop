@@ -1,0 +1,47 @@
+<div class="top-product">
+    <div class="feature">
+        <div class="header">
+            <h3 class="modtitle">
+                <span class="icon-color">
+                    <i class="fa fa-product-hunt" aria-hidden="true"></i>
+                    Last viewed Product
+                </span>
+                <strong class="line-color"></strong>
+            </h3>
+        </div>
+        <div class="container">
+            <div id="container">
+                <div
+                  ng2-carouselamos
+                  class="slides-wrapper"
+                  [items]="images"
+                  [width]="1120"
+                  [$prev]="prev"
+                  [$next]="next"
+                  [$item]="item"
+                >
+                </div>
+               
+               
+                <ng-template #prev>
+                  <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                </ng-template>
+                <ng-template #next>
+                  <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                </ng-template>
+                <ng-template #item let-item let-i="index" >
+                <div class="slide-items" *ngFor="let product of products" >
+                            <div class="card text-left" [routerLink]="['/product-details', product._id]">
+                              <img class="card-img-top" [src]="product.imgUrl" alt="">
+                              <div class="card-body">
+                                <h4 class="card-title">{{product.name}}</h4>
+                                <p class="card-text">{{product.description | summarypipe : 30}}</p>
+                                <p class="card-text">{{product.price | currency:'USD':symbol}}</p>
+                        </div>
+                    </div>
+                </div>
+              </ng-template>
+</div>
+        </div>
+    </div>
+</div>

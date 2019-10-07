@@ -1,0 +1,149 @@
+<div class="bg-shade-gradient">
+        <div class="container">
+            <div class="sign">
+        <h2 class="mb-4 head">Join <span>Ours</span> </h2>
+        <div class="row">
+        <div class="col-6">
+            <form  #form="ngForm" (ngSubmit)="getData(form.value)">
+                <h2 class="f2-light mb-4">
+                    Create your personal account *
+                </h2>
+                <div class="form-group">
+                    <label for="">Username</label>
+                    <input type="trxt" class="form-control"  name="username" (blur)="checkusername(nameuser.value)" [pattern]="namePattern" #nameuser="ngModel" ngModel required minlength="3" maxlength="15">
+                     <span class="text-danger help-block" *ngIf="nameuser.invalid && nameuser.touched"> 
+                         <span *ngIf="nameuser.errors?.required">
+                            username is required*
+                        </span>
+                        <span *ngIf="nameuser.errors?.pattern" class="text-danger"> 
+                                password must be contain any chars and numbers and min chars at least 8 chars and max chars 30 chars and special chars
+                        </span>
+                        <span class="text-danger" *ngIf="nameuser.errors?.minlength"> 
+                           username must be at least {{ username.errors.minlength.requiredLength }}char*
+                       </span>
+                    </span> 
+                    <span class="text-danger" *ngIf="messageUser === 'username is already token'"> 
+                            {{messageUser}}
+                        </span>
+                        <span class="text-success" *ngIf="!nameuser.errors?.pattern &&  messageUser === 'username is available'"> 
+                                {{messageUser}}
+                        </span>
+                    <span class="note">This will be your username.</span>
+                </div>
+                <!-- End username -->
+
+                <div class="form-group">
+                    <label for="">Email address</label>
+                    <input type="email" class="form-control" (blur)="checkemail(email.value)"
+                    autocomplete="off" name="email" #email="ngModel" ngModel required email minlength="5" maxlength="30" email>
+                    <span class="text-danger help-block" *ngIf="email.invalid && email.touched"> 
+                        <span *ngIf="email.errors?.required">
+                        Emial is required*
+                    </span>
+                    <span class="text-danger" *ngIf="email.errors?.email">email must be name@example.com*</span>
+                    </span>
+                    <span *ngIf="messageEmail === 'Email is already token'" class="text-danger" > 
+                            {{messageEmail}}
+                        </span>
+                        <span *ngIf="!email.errors?.email && messageEmail === 'Email is available'" class="text-success"> 
+                                {{messageEmail}}
+                        </span>
+                    <span class="note">We’ll occasionally send updates about your account to this inbox.</span>
+                </div>
+                <!-- End email -->
+
+                <div class="form-group">
+                    <label for="">Password</label>
+                    <input type="password" class="form-control" [pattern]="passowrdPattern" autocomplete="off" name="password" #password="ngModel" ngModel required minlength="8" maxlength="15">
+                    <span class="text-danger" *ngIf="password.invalid && password.touched"> 
+                        <span *ngIf="password.errors.required">
+                            password is required*
+                        </span>
+                    </span> 
+                    <span *ngIf="password.errors?.pattern" class="text-danger"> 
+                            password must be contain any chars and numbers and min chars at least 8 chars and max chars 30 chars and special chars
+                    </span>
+                    <span class="text-danger" *ngIf="password.errors?.minlength"> 
+                        Make sure it's at least 15 characters OR at least 8 characters including a number and a lowercase letter.
+                    </span>
+                    <span class="note">Make sure it's at least 15 characters OR at least 8 characters</span>
+                </div>
+                <!-- End Password -->
+                <div class="form-group">
+                        <label for="">Confirm Password</label>
+                        <input type="password" class="form-control" [pattern]="passowrdPattern" autocomplete="off" name="confirmpassword" #confirm="ngModel" ngModel required minlength="8" maxlength="15">
+                        <span class="text-danger" *ngIf="confirm.invalid && confirm.touched"> 
+                            <span *ngIf="confirm.errors.required">
+                                confirm password is required*
+                            </span>
+                            <span *ngIf="confirm.value !== password.value" class="text-danger"> 
+                                    Passowrds doesn't matches
+                            </span>
+                        </span> 
+                        <span class="note"> Make sure that password same this password</span>
+                    </div>
+                <!-- End confirm password -->
+
+                <div class="form-group">
+                    <label for="">Mobile</label>
+                    <input type="tel" class="form-control" name="mobile" #phone="ngModel" pattern="^\d{11}$" ngModel required>
+                    <span class="text-danger" *ngIf="phone.invalid && phone.touched"> 
+                        <span *ngIf="phone.errors.required">
+                            Mobile is required*
+                        </span>
+                    </span> 
+                    <span class="text-danger" *ngIf="phone.errors?.pattern"> 
+                        Make sure at least 10 numbers and without chars.*
+                    </span>
+                    <span class="note"> That's will be your mobile when you forget a password</span>
+                </div>  
+                <!-- End Phone -->
+
+                <div class="form-group">
+                    <label for="">Is Admin</label>
+                    <select class="custom-select" name="isAdmin" #isAdmin="ngModel" ngModel required>
+                        <option value=""> Are You Admin or not </option>
+                        <option value="true">yes</option>
+                        <option value="false">No</option>
+                    </select>
+                    <span class="text-danger" *ngIf="isAdmin.invalid && isAdmin.touched"> 
+                        <span *ngIf="isAdmin.errors.required">
+                            please select are you admin or not .. 
+                        </span>
+                    </span> 
+                    <span class="note">when you don't select it be automaticlly You are not admin </span>
+                </div>
+    
+    
+                <p class="tos-info">By clicking “Create an account” below, you agree to our
+                    <a href="#" target="_blank">Terms of Service</a> and
+                    <a href="#" target="_blank">Privacy Statement</a>. We’ll occasionally send you account-related emails.</p>
+                    <button type="submit" class="btn btn-primary mb-3" [disabled]="form.invalid"> Create an account </button>
+            </form>
+        </div>
+        <div class="col-4">
+            <h2 class="about heading">About <span>Ours</span> </h2>
+            <div class="card">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam impedit sequi cum quo blanditiis nihil omnis, possimus voluptatibus nulla? Libero assumenda quidem repudiandae? Consequuntur, doloribus eum. Perspiciatis, corrupti odio? Nam illum quaerat ab maiores sequi fugit beatae molestiae dolorum vitae earum porro dolores fuga perferendis ex, magni a atque id!</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+        </div>
+    </div> 
+    
+    <!-- <div class="card" style="width: 18rem;">
+                <h3>You’ll love Our</h3>
+                <div class="card-body">
+                    <ul class="list-group">
+                        <li class="list-group">Limitless collaboration</li>
+                        <li class="list-group">Protection</li>
+                        <li class="list-group">Customer convenience</li>
+                        
+    
+                    </ul>
+                </div>
+    </div> -->
+
+

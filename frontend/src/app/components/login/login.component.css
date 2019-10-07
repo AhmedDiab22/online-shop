@@ -1,0 +1,125 @@
+.toast {
+    width: 120px;
+    text-align: center
+}
+.toast-body .btn{
+    margin-top: 0;
+    font-size: 15px;
+    text-align: center
+}
+form{
+    width: 310px;
+    margin: 90px auto 10px;
+    z-index: 9999;
+}
+
+.auth-form-body{
+    position: relative;
+    border: 1px solid #f00;
+    padding: 50px 20px 20px;
+    background-color: rgb(255, 255, 255);
+    font-size: 14px;
+    border-width: 1px 1px 1px;
+    border-style: solid solid solid solid;
+    border-color: rgb(216, 222, 226) rgb(216, 222, 226) rgb(216, 222, 226);
+    border-image: initial;
+    border-radius: 0px 0px 3px 3px;
+}
+.social i{
+    color: #fff;
+}
+.social .facebook{
+    background-color: #4267b2
+}
+.social .google{
+    background: #92241a
+}
+.form-control:focus, .form-select.focus, .form-select:focus {
+    border-color: #343a40;
+    box-shadow: inset 0 1px 2px rgba(27,31,35,.075), 0 0 0 0.1em #343a40;
+    outline: none;
+}
+img{
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    top: -49px;
+    left: 31%;
+    background-color: #fff;
+    border-radius: 20%;
+    padding: 4px;
+    border: 1px solid #343a40;
+
+}
+input{
+    margin: 5px 0 0px;
+    padding: 6px 8px
+}
+.btn-block {
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+.btn {
+    margin-top: 20px;
+}
+label {
+    display: block;
+    margin-bottom: 7px;
+}
+label {
+    font-weight: 600;
+    font-size: 12px
+}
+label a {
+    float: right;
+    color: #343a40;
+    cursor: pointer;
+}
+.create-account-callout {
+    text-align: center;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(216, 222, 226);
+    border-image: initial;
+    border-radius: 5px;
+    padding: 15px 20px;
+    width: 310px;
+    margin: auto;
+    font-size: 14px
+}
+p a{
+    color: #343a40;
+    cursor: pointer;
+}
+h1{
+    color: #343a40;
+    position: relative;
+    margin-top: 30px;
+}
+h1:after{
+    position: absolute;
+    content: '';
+    top: 50px;
+    left: 0;
+    width: 70px;
+    height: 1px;
+    background-color: #ccc;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #343a40;
+    border-color: #343a40;
+}
+.btn-primary:not(:disabled):not(.disabled):active{
+    color: #fff;
+    background-color: #343a40; 
+    border-color: #343a40;
+}  
+.btn-primary:not(:disabled):not(.disabled):active:focus {
+    box-shadow: 0 0 0 0.2rem #343a40;
+}
+.btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem #343a40;
+}

@@ -1,0 +1,176 @@
+.logo{
+    color: #a8a9d4;
+    outline: none
+}
+.logo h2 {
+    padding: 0 10px;
+    margin: 0;
+    display: inline;
+    font-size: 57px;
+    letter-spacing: 12.5px;
+    font-style: italic;
+    font-family: monospace;
+    cursor: pointer;
+    outline: 0
+}
+.logo i {
+    transform: rotate(-45deg);
+    padding-left: 0px;
+    font-size: 40px;
+    cursor: pointer;
+}
+.userinfo{
+    margin-top: 6px;
+    padding-left: 0;
+}
+.userinfo .user{
+    display: inline-flex;
+}
+.userinfo .user i{
+    position: absolute;
+    top: 20px;
+    left: 21px;
+    width: 25px;
+    font-size: 33px;
+    height: 25px;
+}
+.userinfo .login{
+    display: inline-flex;
+}
+.userinfo ul{
+    margin-top: 2px;
+}
+.userinfo ul li{
+    font-size: 19px
+}
+
+
+.membaership , 
+.iconShop{
+    margin-top: 25px;
+    text-align: right
+}
+.membaership span{
+    font-size: 20px;
+    font-weight: 900;
+    margin-top: 20px;
+    text-transform: uppercase;
+    color: #a8a9d4
+}
+.searchProduct{
+    margin-top: 23px;
+}
+.searchProduct .form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #a8a9d4;
+    outline: 0;
+    box-shadow: 0 0 0 0.1rem rgb(168, 169, 212);
+}
+
+.notuser ul{
+    display: flex;
+    padding-top: 7px;
+    margin-top: 10px;
+}
+.notuser ul li{
+    padding: 3px 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    outline: 0;
+    border: 1px solid #a7a8a8;
+}
+.notuser ul li:hover{
+    color: #fff;
+    background-color: #a8a9d4;
+    border: 1px solid #fff;
+    transition: all .5s ease-in-out
+}
+.navbar{
+    padding:0px 0 0 36px
+}
+.navbar-nav li:hover > ul.dropdown-menu {
+    display: block;
+}
+.dropdown-submenu {
+    position:relative;
+}
+.dropdown-submenu>.dropdown-menu {
+    top:0;
+    left:100%;
+    margin-top:-6px;
+}
+
+/* rotate caret on hover */
+.dropdown-menu > li > a:hover:after {
+    text-decoration: underline;
+    transform: rotate(-90deg);
+} 
+
+nav ul{
+    padding: 0 !important
+}
+nav ul .item-dropdown{
+    padding:  5px 0 !important
+}
+
+.dropdown-menu{
+    top: 80% !important
+}
+
+.listUser li:not(:last-of-type){
+    border-bottom: 1px dashed #d2d3d4;
+    transition: all .5s ease-in-out
+}
+.listUser li:not(:last-of-type):hover{
+    border-bottom-color: #a8a9d4;
+    transition: all .5s ease-in-out
+}
+.listUser li a{
+    font-size: 15px;
+    color: #a7a8a8;
+    transition: all .5s ease-in-out
+}
+.listUser li a:hover{
+    color: #000;
+    padding-left: 30px;
+    transition: all .5s ease-in-out
+}
+.listUser .dropdown-item{
+    padding: 8px 17px;
+}
+.listUser span{
+    padding-left: 10px
+}
+.iconShop {
+    outline: none
+}
+.iconShop i{
+    position: relative;
+    font-size: 32px;
+    padding-right: 100px;
+    cursor: pointer;
+}
+.iconShop span{
+    position: absolute;
+    top: -11px;
+    font-size: 20px;
+    left: 18px;
+    background: #a8a9d4;
+    color: #fff;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 25px;
+    transition: all .5s ease-in-out
+}
+.iconShop i:hover span{
+    top: -15px;
+    transition: all .5s ease-in-out
+}
+
+.validUser ul{
+    margin-top: 9px !important;
+    padding-left: 10px !important;
+}

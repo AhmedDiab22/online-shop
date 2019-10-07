@@ -1,0 +1,153 @@
+<div class="product-details">
+    <div class="container">
+        <div class="details-product">
+            <div class="row">
+                <div class="col-9">
+                    <div class="card">
+                        <div class="row">
+                            <div class="col-5 borderRight">
+                                <img src={{productImgUrl}} alt="">
+                                <button class="btn btn-primary btn-block mt-3 py-2" (click)="aa()" *ngIf="productForm">
+                                    Add to Cart </button> &nbsp;
+
+                                <form class="formAmount" *ngIf="!productForm" #form="ngForm"
+                                    (submit)="addForm(form.value)">
+                                    <input type="hidden" class="form-control" name="name" [(ngModel)]="productName">
+                                    <input type="hidden" class="form-control" name="price" [(ngModel)]="productPrice">
+                                    <input type="text" placeholder="amount kg" class="form-control" name="amount"
+                                        #aamount="ngModel" ngModel required>
+                                    <input type="hidden" class="form-control" name="userId" [(ngModel)]="CurrentIdUser">
+                                    <input type="hidden" class="form-control" name="productId" [(ngModel)]="productId">
+                                    <div class="row">
+                                        <div class="col">
+                                            <button type="submit" class="btn btn-success mt-2 btn-block"
+                                                [disabled]="form.invalid">Add to cart</button>
+                                        </div>
+                                        <div class="col">
+                                            <button class="btn btn-secondary mt-2 btn-block"
+                                                (click)="cancle()">Cancle</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-7">
+                                <h2 [title]="productDescription">{{productDescription | summarypipe : 40 }}</h2>
+                                <p class="card-text">In Stock: <span class="badge badge-primary">1 Piece</span></p>
+                                <h4 class="card-title">{{productPrice | currency:'USD' }} / Piece</h4>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="inner-box-desc">
+                                            <div class="price-tax">
+                                                <span> Fashion Accessories </span>
+                                                <span> Other Jewelry </span>
+                                            </div>
+                                            <div class="model">
+                                                <span>Item Code:</span> # 2003
+                                            </div>
+                                            <div class="watched">
+                                                <span><i class="fa fa-eye"></i> 475</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="inner-box-desc">
+                                            <div class="price-tax"><span>Condition:</span> New (In original box )</div>
+                                            <div class="watched"><span class="model"><i class="fa fa-calendar"></i> Last
+                                                    Visit </span>30-08-2019</div>
+                                            <div class="minimum-order">
+                                                <label>Minimum Order: </label>
+                                                <label><b><span style="font-family:arial">
+                                                            1</span> /Piece</b></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="info">
+                                    <p>Country : <img src="../../../assets/imgs/countries/1452778415_114330.png"
+                                            alt=""><span>Germany</span></p>
+                                    <p>Delivery Time: <span> <a href="#"> ( <i class="fa fa-question"
+                                                    aria-hidden="true"></i> ask supplier ) </a> </span></p>
+                                    <p>Shipping Methods : <span> DHL, Aِِramex, Sea ​​Shipment, Air Freight</span></p>
+                                    <p>Payment Methods : <span>Bank Transfer, Paypal, Cash</span></p>
+                                    <p>Shipping to: <span> <a href="#"> ( <i class="fa fa-question"
+                                                    aria-hidden="true"></i> ask supplier ) </a> </span></p>
+                                </div>
+                                <hr>
+                                <form class="btn-width">
+                                    <button class="btn btn-secondary"><i class="fa fa-envelope"
+                                            aria-hidden="true"></i>Contact Supplier</button> &nbsp;
+                                    <button class="btn btn-info"><i class="fa fa-heart" aria-hidden="true"></i></button>
+                                    &nbsp;
+                                    <button class="btn btn-dark" (click)="cancel()"> <i class="fa fa-arrow-left"
+                                            aria-hidden="true"></i> Back</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="related-producs">
+                        <div class="heading">
+                            <h2> <i class="fa fa-reply-all" aria-hidden="true"></i> Related products </h2>
+                        </div>
+                        <div class="product">
+                            <div class="row" *ngFor="let product of allProducts ">
+                                <div class="col-6">
+                                    <img [src]="product.imgUrl" alt="">
+                                </div>
+                                <div class="col-6">
+                                    <h3> {{product.name}}</h3>
+                                    <h4 class="card-titl">{{product.price | currency:'USD':code}}</h4>
+                                    <div class="paragraph">
+                                        <p>500 / Kilogram</p>
+                                        <p>500 Kilogram</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about-company">
+            <div class="row">
+                <div class="col-9">
+                    <div class="row">
+                        <div class="col-12">
+                            <ul class="list-group list-group-horizontal" id="list-tab" role="tablist">
+                                <li><a class="list-group-item list-group-item-action active" id="list-dedcription-list"
+                                        data-toggle="list" href="#list-dedcription" role="tab"
+                                        aria-controls="dedcription">Description</a></li>
+                                <li><a class="list-group-item list-group-item-action" id="list-about-company-list"
+                                        data-toggle="list" href="#list-about-company" role="tab"
+                                        aria-controls="about-company">about-company</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="tab-content tab1" id="nav-tabContent">
+                                    <div class="tab-pane fade show active" id="list-dedcription" role="tabpanel"
+                                        aria-labelledby="list-dedcription-list">Jedereinzelne Kristall wird von den
+                                        ASFOUR Kristallfabriken strengen Inspektionenund Prüfungen unterzo oder
+                                        Schlieren vorhanden sind. Außerdem wird Ihr Kristall nie die Farbeoder sein
+                                        Glanz verlieren. Das Spektrum und der Wechsel von Licht und Farbenwerden
+                                        leuchtend und strahlend für das ganze Leben beiben. <br>
+                                        Allunsere Produkte sind entweder Vergoldet oder Versilbert..</div>
+                                    <div class="tab-pane fade tab2" id="list-about-company" role="tabpanel"
+                                        aria-labelledby="list-about-company-list">Please Register To Contact Supplier
+                                        Toggar<a routerLink="/register"> Register Now . </a> If You are Already
+                                        Registered.<a routerLink="/login"> Login Now . </a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 adv">
+                    <a href="#"> <img src="../../../assets/imgs/banner/New folder/1495373907_845598.jpg" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
