@@ -7,7 +7,7 @@ import { CanActivate } from '@angular/router';
 })
 export class UserService{
 
-  url = 'http://localhost:6050/user';
+  url = '';
   authToken;
   user;
   options;
